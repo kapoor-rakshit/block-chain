@@ -1,0 +1,83 @@
+﻿
+Blockchain is the algorithm for Distributed Ledger Technology (DLT ).
+A blockchain, originally block chain, is a growing list of records, called blocks, which are linked using cryptography.
+Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data.
+By design, a blockchain is resistant to modification of the data.
+DLT and Blockchain as a concept can be used in varied applications beyond crypto-currency network (Bitcoin, Ethereum), Real estate, logistics, Banking and Financial Sector, Fin-Tech and elections & surveys.
+
+Cryptocurrency Frameworks
+------------------------------------
+Bitcoin
+Ethereum
+
+
+Hyperledger Project
+---------------------------
+Project by Linux Foundation
+To create a custom BlockChain for industries
+It is a collection of Frameworks and Tools
+
+
+Main problems solved :
+Double Spending problem
+Need for trusted third party problem
+
+Each of block contains LEDGER
+Same chain of blocks ( with prevHASH and HASH value same for corresponding blocks in each node ) is present with each node in a network
+
+After any change in data of a NODE is made, we need to MINE the node so that change gets reflected in HASH values for subsequent blocks.
+
+
+
+Block Structure
+---------------------
+Block no.
+Data (Transactions/Ledger)
+Nonce ( an arbitrary number that can be used just once in a cryptographic communication )
+Block hash
+Previous Block hash
+
+Block no. | Data | Nonce | Prev. Block hash    are used for generating current block hash
+
+
+
+Chain
+----------
+Blocks are connected to form a chain.
+These CHAINS are prevented from attacker as:
+ - if attacker changes hash of current block
+ - the previous pointer of next block will also need to be changed
+ - so all subsequent blocks hash needs to be recalculated to complete a chain
+ - Proof of work involved will make it further difficult
+
+   Proof of Work
+      - It validates the hash values of block whose data is changed to block whose hash
+      - Produce a challenge to user / computer
+      - user / computer must produce a result to challenge
+      - motive is to generate a value that is difficult to generate ( in terms of CPU power ) and yet easily verifiable
+      - example : generation of N leading zeros in block hash
+      - This is achieved using NONCE and BLOCK DATA
+
+
+
+Transactions
+-----------------
+Transactions data/record is stored in BLOCK in form of a MERKEL TREE
+ - Transaction records are hashed
+ - Then they are paired and hashed again
+ - This process repeats until there is one ROOT hash, this gives a MERKEL TREE structure
+
+Each transaction record is signed by PRIVATE KEY of SENDER
+This signature is appended with TRANSACTION
+This can be used to validate that TRANSACTION is initiated by particular SENDER
+PUBLIC KEY of SENDER is used to generate SIGNATURE which can be validated
+
+
+
+Blockchain Demo
+-----------------------
+Visit  :  https://anders.com/blockchain/
+
+
+
+
