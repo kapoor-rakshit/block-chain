@@ -11,13 +11,13 @@ Blockchain was invented by a person (or group of people) using the name Satoshi 
 ledger of the cryptocurrency bitcoin. The identity of Satoshi Nakamoto is unknown.
 
 
-Cryptocurrency Frameworks
+Applications / Frameworks / Platforms
 ----------------------------
-Bitcoin
-Ethereum
+Bitcoin       (Cryptocurrency application)           (Public Blockchain)
+Ethereum      (Platform, used for creating DApp(s))  (Public Blockchain)
 
 
-Hyperledger Project
+Hyperledger Project                                  (Enterprise Blockchain)
 ---------------------------
 Project by Linux Foundation
 To create a custom BlockChain for industries
@@ -31,6 +31,13 @@ Main problems solved
      Unlike physical cash, a digital token consists of a digital file that can be duplicated or falsified.
 2. Need for trusted third party problem
      It allows disintermediation which allows Peer to Peer economy without or minimum intermediaries.
+3. Decentralized
+4. Immutable
+5. Consensus
+6. Secure
+7. Reduce reconciliation
+8. Public records
+9. Democratization
      
 
 
@@ -63,7 +70,7 @@ These CHAINS are prevented from attacker as:
  - if attacker changes hash of current block
  - the previous pointer of next block will also need to be changed
  - so all subsequent blocks hash needs to be recalculated to complete a chain
- - Proof of work involved will make it further difficult
+ - Proof of work (PoW), a software protocol, involved will make it further difficult
 
    Proof of Work
       - It validates the hash values of block whose data is changed to block whose hash
@@ -81,7 +88,8 @@ When a new block of transaction is added , Nodes check if a block of transaction
 Nodes save and store blocks of transactions (storing blockchain transaction history).
 Nodes broadcast and spread this transaction history to other nodes that may need to synchronize with the blockchain (need to be updated on transaction history).
 
-A full node is a full copy of the blockchain transaction history on any device.
+a FULL NODE or LEADER NODE is a full copy of the blockchain transaction history on any device.
+It participates in consensus algorithm and updates it's ledger, once all other nodes updated.
 
 Nodes can be online or offline. 
 Online nodes are receiving, saving and broadcasting all the latest blocks of transactions from and to other nodes, while offline nodes do not. 
