@@ -38,15 +38,41 @@ Main problems solved
 7. Reduce reconciliation
 8. Public records
 9. Democratization
-     
+
+
+
+Encryption and Hash
+--------------------
+1. Asymmetric encryption
+   RSA algorithm is asymmetric cryptography algorithm.
+   Asymmetric actually means that it works on two different keys i.e. Public Key and Private Key.
+   As the name describes that the Public Key is given to everyone and Private key is kept private.
+   Used in : HTTPS websites (SSL), SSH....and many more
+   
+2. Symmetric encryption
+   a type of encryption where only one key (a secret key) is used to both encrypt and decrypt electronic information. 
+   The entities communicating via symmetric encryption must exchange the key so that it can be used in the decryption process.
+   
+Blockchain uses Asymmetric encryption.
+   The users exchange their Public keys.
+   Sender encrypts data with Receiver's Public key
+   Receiver decrypts the data with it's own Private key.
+   If sender's Private key is cracked, the cracker will not be able to decrypt data sent as it does not have Private key of receiver.
+   
+NOTE : Hash (Digital fingerprint or Digest) is used for comparison purpose not for encryption.
+       Hash is a non-reversible function, given a hash, we cannot retrieve the message back from hash of that message.
+       Hash is always of fixed size, no matter how big or small is data.
+       Hash is always unique, but Hashing same data always gives same answer so it is a "DETERMINISTIC RANDOM NUMBER".
+   
 
 
 Infrastructure
 ---------------
-A blockchain exists out of blocks of data. 
-These blocks of data are stored on nodes (compare it to small servers). 
+A block consists of transactions in past 10 mins (or so, time vary according to platform)
+A blockchain exists out of these blocks connected to each other.
+This blockchain is stored on nodes. 
 Nodes can be any kind of device (mostly computers, laptops or even bigger servers).
-Nodes form the infrastructure of a blockchain. 
+Nodes form the infrastructure of a blockchain network.
 All nodes on a blockchain are connected to each other and they constantly exchange the latest blockchain data with each other so all nodes stay up to date. 
 
 
@@ -54,7 +80,7 @@ All nodes on a blockchain are connected to each other and they constantly exchan
 Block Structure
 ---------------------
 Block no.
-Data (Transactions/Ledger)
+Data (Transactions/Ledger in form of MERKLE TREE)
 Nonce ( an arbitrary number that can be used just once in a cryptographic communication )
 Block hash
 Previous Block hash
@@ -96,21 +122,21 @@ Online nodes are receiving, saving and broadcasting all the latest blocks of tra
 When an offline node comes back online, it will need to catch up with the rest of the blockchain first by downloading all blocks that were added to the blockchain ever since the node went offline. 
 This process is often referred to as synchronizing with the blockchain.
 
-Transactions data/record is stored in BLOCK in form of a MERKEL TREE
- - Transaction records are hashed
- - Then they are paired and hashed again
- - This process repeats until there is one ROOT hash, this gives a MERKEL TREE structure
 
-Each transaction record is signed by PRIVATE KEY of SENDER
-This signature is appended with TRANSACTION
-This can be used to validate that TRANSACTION is initiated by particular SENDER
-PUBLIC KEY of SENDER is used to generate SIGNATURE which can be validated
+Transactions data/record is stored in BLOCK in form of a MERKLE TREE
+ - This is named after Ralph C. Merkle who proposed this idea of storing data.
+ - MERKLE TREE has leaves, branches and a root.
+ - Transaction records in a block are paired and hashed again using their hash values.
+ - This process repeats until there is one MERKLE ROOT hash, this gives a MERKLE TREE structure.
 
 
 
-Blockchain Demo
------------------------
-Visit  :  https://anders.com/blockchain/
+Essentials
+------------
+Visit  :  https://anders.com/blockchain/                                         (Blockchain demo)
+       :  https://blockexplorer.com/                                             (Info on Bitcoin blockchain)
+       :  http://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html  (Merkle tree example code, Notes & References section)
+       :  
 
 
 
