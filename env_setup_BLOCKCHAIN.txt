@@ -77,6 +77,14 @@ All nodes on a blockchain are connected to each other and they constantly exchan
 
 
 
+Smart Contracts
+----------------
+Smart contracts are just like physical contracts but digital. To say other way it is a computer program stored on Blockchain.
+Being on Blockchain, they inherit properties like IMMUTABLE and DISTRIBUTED.
+On Ethereum, SOLIDITY is a programming language used for writing smart contracts.
+
+
+
 Block Structure
 ---------------------
 Block no.
@@ -128,6 +136,21 @@ Transactions data/record is stored in BLOCK in form of a MERKLE TREE
  - MERKLE TREE has leaves, branches and a root.
  - Transaction records in a block are paired and hashed again using their hash values.
  - This process repeats until there is one MERKLE ROOT hash, this gives a MERKLE TREE structure.
+ 
+ 
+ 
+ Hard fork / Soft fork of Bitcoin
+ ---------------------------------
+If Bitcoin blockchain / protocol is forked and is incompatible with original it is HARD FORK.
+   Eg:- Bitcoin Cash, Bitcoin Unlimited, Bitcoin XT, Bitcoin Gold, Segwit.
+   
+If Bitcoin blockchain / protocol is forked and is made compatible with original it is SOFT FORK.
+
+
+
+Byzantine attack and Fault Tolerance
+-------------------------------------
+
 
 
 
