@@ -115,6 +115,15 @@ On Ethereum, SOLIDITY is a programming language used for writing smart contracts
 
 
 
+ERC20
+------
+Tokens lie on blocks of a blockchain. They can be currency, shares, loyalty points, gold certificates.
+Tokens are created using Smart Contract, which handles transactions, keep track of balances.
+To get some tokens, we have to send ethers to Smart Contract which gives in return tokens.
+This can be quite complex for large transactions happening as once a Smart Contract deployed, it is immutable. A bug may exist in Smart Contract code.
+So a standard was introduced ERC20 (Ethereum Request for Comments) and ERC223.
+
+
 Block Structure
 ---------------------
 Block no.
